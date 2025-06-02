@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simong CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="../styles/index.css" />
+    <script src="../scripts/index.js"></script>
+  </head>
+  <body class="page">
+    <div id="header"></div>
+
+    <main class="wrapper py-4 space-y-6 max-w-md">
+      <h1 class="page-label">Transactions</h1>
+
+      <div class="card relative overflow-hidden min-h-[200px] flex flex-col">
+        <img
+          src="../assets/icons/icon-db-trx.svg"
+          class="absolute -top-[50px] -right-[100px] opacity-10 w-fit h-[300px] block z-1"
+        />
+        <div class="flex items-center justify-between w-full">
+          <h4 class="font-semibold text-lg flex-none">TRX</h4>
+          <span class="text-lg">0.00</span>
+        </div>
+
+        <button class="mt-auto btn z-2 relative !w-fit">Deposit</button>
+      </div>
+    </main>
+
+    <script>
+      loadHTML("header", "../components/header.html");
+    </script>
+  </body>
+</html>

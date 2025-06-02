@@ -1,0 +1,8 @@
+/* Register Note */
+.register-note {
+  font-size: 0.875rem;
+  text-align: center;
+}
+.register-note a {
+  text-decoration: underline;
+}

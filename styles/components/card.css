@@ -1,0 +1,24 @@
+/* Card */
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 0 0 1px #e5e7eb, 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+.card-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.card-title {
+  font-size: 1.5rem;
+  color: #2563eb;
+  font-weight: 600;
+}
+.logo {
+  height: 100px;
+  margin-bottom: 1rem;
+}
+.logo img {
+  height: 100%;
+  object-fit: contain;
+}

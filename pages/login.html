@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/login.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="page">
+    <main class="wrapper flex items-center justify-center h-full">
+      <div class="card md:max-w-[500px] w-full">
+        <div class="card-header">
+          <div class="logo flex justify-center">
+            <img src="../assets/logo.png" alt="Logo" />
+          </div>
+          <h1 class="card-title">LOGIN</h1>
+        </div>
+
+        <form class="form">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="email" required />
+            <p class="error hidden">Email is required</p>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" type="password" required />
+            <p class="error hidden">Password is required</p>
+          </div>
+
+          <p class="error hidden">Invalid email or password.</p>
+
+          <div class="form-options">
+            <label class="checkbox">
+              <input type="checkbox" id="remember" />
+              Remember me
+            </label>
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn">Login</button>
+
+          <p class="register-note">
+            Don't have an account? <a href="#">Register</a>
+          </p>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

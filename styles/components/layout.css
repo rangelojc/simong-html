@@ -1,0 +1,40 @@
+.wrapper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    width: 75%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .wrapper-lg {
+    width: 85% !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    width: 65%;
+  }
+
+  .wrapper-lg {
+    width: 75% !important;
+  }
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgb(253, 253, 253); /* light gray */
+}
+
+.page-label {
+  font-weight: bold;
+  font-size: 1.5rem;
+}

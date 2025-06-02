@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입/출금</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="../styles/index.css" />
+    <script src="../scripts/index.js"></script>
+  </head>
+  <body class="page">
+    <div id="header"></div>
+
+    <main class="wrapper py-6 space-y-6 max-w-md">
+      <h1 class="page-label">Transactions</h1>
+
+      <div
+        class="card relative overflow-hidden min-h-[200px] flex flex-col !p-8"
+      >
+        <img
+          src="../assets/icons/icon-db-trx.svg"
+          class="absolute -top-[50px] -right-[100px] opacity-10 w-fit h-[300px] block z-1"
+        />
+        <div class="flex flex-col items-center justify-center w-full">
+          <h4 class="font-semibold text-lg flex-none">내 TRX 지갑</h4>
+          <div class="mt-2"><img src="../assets/qr-sample.png" /></div>
+        </div>
+
+        <input
+          type="text"
+          value="TMoFdLY9jkgnC1MQtqeJF4Z2QbsDg5zFJa"
+          class="border-b mt-4 text-gray-500"
+          readonly
+        />
+      </div>
+
+      <ul class="list-disc px-8 text-gray-500">
+        <li>이 주소는 TRX 전용이므로, TRX 입금만 가능합니다.</li>
+        <li>
+          TRX 외 다른 코인을 지갑에 오입금 하신 경우 기술적으로 입금처리가
+          불가능하오니 정확한 입금주소를 확인하시고 입금하여주시기 바랍니다.
+        </li>
+        <li>블록체인 네트워크 상태에 따라 지연이 발생할 수 있습니다.</li>
+      </ul>
+    </main>
+
+    <script>
+      loadHTML("header", "../components/header.html");
+    </script>
+  </body>
+</html>

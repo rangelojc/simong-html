@@ -12,7 +12,61 @@
   <body class="page">
     <div id="header"></div>
 
-    <main class="wrapper"></main>
+    <main class="wrapper mt-20 text-gray-900 py-20 px-6">
+      <!-- Hero Section -->
+      <section class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl sm:text-5xl font-bold mb-6">
+          당신의 크립토 여정을 혁신하세요
+        </h1>
+        <p class="text-lg text-gray-600 mb-8">
+          안전하고 빠르게 거래하고, 보상받고, 성장하세요.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="#get-started"
+            class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-medium transition"
+          >
+            시작하기
+          </a>
+          <a
+            href="#learn-more"
+            class="px-6 py-3 border border-gray-400 hover:bg-gray-100 rounded-md font-medium transition"
+          >
+            더 알아보기
+          </a>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section
+        class="max-w-6xl mx-auto mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center"
+      >
+        <div
+          class="bg-white border border-gray-200 p-6 rounded-lg shadow hover:shadow-md transition"
+        >
+          <h3 class="text-xl font-semibold mb-2">보안 지갑</h3>
+          <p class="text-gray-500">
+            멀티 계층 암호화와 콜드 스토리지를 통한 안전한 자산 관리.
+          </p>
+        </div>
+        <div
+          class="bg-white border border-gray-200 p-6 rounded-lg shadow hover:shadow-md transition"
+        >
+          <h3 class="text-xl font-semibold mb-2">수수료 0%</h3>
+          <p class="text-gray-500">
+            모든 거래에서 수수료 없이 최대 수익을 누리세요.
+          </p>
+        </div>
+        <div
+          class="bg-white border border-gray-200 p-6 rounded-lg shadow hover:shadow-md transition"
+        >
+          <h3 class="text-xl font-semibold mb-2">24시간 지원</h3>
+          <p class="text-gray-500">
+            언제든지 전문가의 도움을 받을 수 있습니다.
+          </p>
+        </div>
+      </section>
+    </main>
 
     <script>
       loadHTML("header", "../components/header.html");

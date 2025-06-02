@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simong CSS</title>
+    <title>입/출금</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="stylesheet" href="../styles/index.css" />
@@ -12,7 +12,7 @@
   <body class="page">
     <div id="header"></div>
 
-    <main class="wrapper py-4 space-y-6 max-w-md">
+    <main class="wrapper py-6 space-y-6 max-w-md">
       <h1 class="page-label">Transactions</h1>
 
       <div class="card relative overflow-hidden min-h-[200px] flex flex-col">
@@ -25,7 +25,11 @@
           <span class="text-lg">0.00</span>
         </div>
 
-        <button class="mt-auto btn z-2 relative !w-fit">Deposit</button>
+        <button
+          class="mt-auto btn-outline z-2 relative !w-fit px-4 font-medium"
+        >
+          <a href="./deposit.html">입금</a>
+        </button>
       </div>
     </main>
 

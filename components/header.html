@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Header</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-gray-100">
     <header class="bg-white shadow-md">
@@ -23,13 +25,15 @@
                 <a href="../pages/wallet.html">지갑</a>
               </button>
               <button class="text-gray-700 hover:text-black">
-                <a href="#">축복버튼</a>
+                <a href="../pages/reward.html">축복버튼</a>
               </button>
               <button class="text-gray-700 hover:text-black">
-                <a href="#">MY</a>
+                <a href="../pages/my.html">MY</a>
               </button>
               <button class="text-gray-700 hover:text-black">
-                <a href="#">트레이딩</a>
+                <a href="https://trade.simongccs.com" target="_blank"
+                  >트레이딩</a
+                >
               </button>
             </div>
 
@@ -37,9 +41,9 @@
             <select
               class="bg-white border border-gray-300 text-gray-700 text-sm rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
+              <option>KR</option>
               <option>EN</option>
               <option>JP</option>
-              <option>KR</option>
             </select>
 
             <!-- User Dropdown -->
@@ -113,70 +117,34 @@
       <!-- Mobile Menu -->
       <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
         <button class="block w-full text-left text-gray-700 hover:text-black">
-          Wallet
+          <a href="../pages/wallet.html">지갑</a>
         </button>
         <button class="block w-full text-left text-gray-700 hover:text-black">
-          Blessing Button
+          <a href="../pages/reward.html">축복버튼</a>
         </button>
         <button class="block w-full text-left text-gray-700 hover:text-black">
-          MY
+          <a href="../pages/my.html">MY</a>
         </button>
         <button class="block w-full text-left text-gray-700 hover:text-black">
-          Trading
+          <a href="https://trade.simongccs.com" target="_blank">트레이딩</a>
         </button>
-        <select
-          class="w-full bg-white border border-gray-300 text-gray-700 text-sm rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        >
-          <option>EN</option>
-          <option>JP</option>
-          <option>KR</option>
-        </select>
 
-        <div class="relative">
-          <button
-            id="mobile-user-button"
-            class="w-full flex justify-between items-center px-4 py-2 text-gray-700 hover:text-black focus:outline-none border border-gray-300 rounded"
+        <div class="!mt-4">
+          <select
+            class="w-fit bg-white border border-gray-300 text-gray-700 text-sm rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-            <span>User</span>
-            <svg
-              id="mobile-user-chevron"
-              class="w-4 h-4 transition-transform"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
+            <option>KR</option>
+            <option>EN</option>
+            <option>JP</option>
+          </select>
+        </div>
+
+        <div class="mt-4">
+          <button class="block w-full text-left text-gray-700 hover:text-black">
+            Logout
           </button>
-          <div
-            id="mobile-user-menu"
-            class="hidden mt-1 space-y-1 border border-gray-200 rounded bg-white shadow-md"
-          >
-            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-              >Profile</a
-            >
-            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-              >Settings</a
-            >
-            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-              >Logout</a
-            >
-          </div>
         </div>
       </div>
     </header>
-
-    <script>
-      const btn = document.getElementById("mobile-menu-button");
-      const menu = document.getElementById("mobile-menu");
-      btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
-    </script>
   </body>
 </html>

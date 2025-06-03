@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simong CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="../styles/index.css" />
+    <script src="../scripts/index.js"></script>
+  </head>
+  <body class="page">
+    <div id="header"></div>
+
+    <main class="wrapper py-6 max-w-md">
+      <div class="p-4">
+        <h1 class="text-xl font-bold mb-6">비밀번호 변경</h1>
+
+        <div class="mb-4">
+          <label for="email_address" class="block text-sm mb-1">이메일</label>
+          <div class="flex">
+            <input
+              id="email_address"
+              name="email_address"
+              type="email"
+              placeholder="이메일 입력"
+              maxlength="50"
+              readonly
+              required
+              value="t002@test.com"
+              class="flex-1 border rounded px-3 py-2 bg-gray-100"
+            />
+            <button
+              type="button"
+              id="btn_send_email"
+              class="ml-2 px-4 py-2 rounded text-white bg-[var(--color-primary)]"
+            >
+              전송
+            </button>
+            <input
+              type="hidden"
+              id="is_send_email"
+              name="is_send_email"
+              value="0"
+            />
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label for="auth_text" class="block text-sm mb-1">인증번호</label>
+          <div class="flex items-center">
+            <input
+              id="auth_text"
+              name="auth_text"
+              type="text"
+              placeholder="인증번호 입력"
+              maxlength="4"
+              required
+              class="flex-1 border rounded px-3 py-2"
+            />
+            <div class="ml-4 text-[var(--color-primary)] font-medium">
+              <span id="timer_minutes">5</span>:<span id="timer_seconds"
+                >00</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full">
+          <button
+            type="button"
+            class="w-full py-2 rounded text-white bg-[var(--color-primary)]"
+            onclick="AuthCheckProcess('email_address')"
+          >
+            다음
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      loadHTML("header", "../components/header.html");
+    </script>
+  </body>
+</html>

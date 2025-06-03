@@ -22,19 +22,22 @@
             id="area_coin_sum_amount"
           >
             <div>보유 SMC 수량</div>
-            <div class="font-semibold text-blue-600">0 SMC</div>
+            <div class="font-semibold text-[var(--color-primary)]">0 SMC</div>
           </div>
 
           <div class="flex justify-between items-center mb-2">
             <div>최소 전환 수량</div>
-            <div class="font-semibold text-blue-600" id="minConversionAmount">
+            <div
+              class="font-semibold text-[var(--color-primary)]"
+              id="minConversionAmount"
+            >
               0 SMC
             </div>
           </div>
 
           <div class="flex justify-between items-center mb-4">
             <div>보유 포인트</div>
-            <div class="font-semibold text-blue-600">0 TTCP</div>
+            <div class="font-semibold text-[var(--color-primary)]">0 TTCP</div>
           </div>
 
           <div class="mb-4" id="area_convert_coin_amount">
@@ -107,7 +110,7 @@
             id="area_payments_point_amount"
           >
             <div>지급 포인트</div>
-            <div class="text-blue-600 font-semibold">
+            <div class="text-[var(--color-primary)] font-semibold">
               <span id="payments_point_amount">0</span> TTCP
             </div>
           </div>
@@ -116,7 +119,7 @@
             type="button"
             id="btnPointConvertConfirm"
             onclick="PointConvertConfirm()"
-            class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
+            class="w-full bg-[var(--color-primary)] text-white py-2 rounded hover:bg-blue-700 transition"
           >
             전환
           </button>
@@ -133,14 +136,14 @@
               <div class="space-y-4">
                 <div class="flex justify-between">
                   <div>전환 수량</div>
-                  <div class="font-semibold text-blue-600">
+                  <div class="font-semibold text-[var(--color-primary)]">
                     <span id="confirm_convert_coin_amount"></span>
                     <span id="modal_coin_type">SMC</span>
                   </div>
                 </div>
                 <div class="flex justify-between">
                   <div>지급 포인트</div>
-                  <div class="font-semibold text-blue-600">
+                  <div class="font-semibold text-[var(--color-primary)]">
                     <span id="confirm_payments_point_amount"></span> TTCP
                   </div>
                 </div>
@@ -149,7 +152,7 @@
                 <button
                   type="button"
                   id="btnPointConvertProcess"
-                  class="flex-1 bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+                  class="flex-1 bg-[var(--color-primary)] text-white py-2 rounded hover:bg-blue-700"
                 >
                   전환
                 </button>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simong CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="../styles/index.css" />
+    <script src="../scripts/index.js"></script>
+  </head>
+  <body class="page">
+    <div id="header"></div>
+
+    <main class="wrapper py-6 max-w-md">
+      <div class="p-4">
+        <h1 class="text-xl font-bold mb-6">보안비밀번호</h1>
+
+        <div class="space-y-4 mb-6">
+          <div class="flex items-start space-x-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-circle-alert-icon lucide-circle-alert flex-none"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" x2="12" y1="8" y2="12" />
+              <line x1="12" x2="12.01" y1="16" y2="16" />
+            </svg>
+            <div>
+              보안비밀번호는 출금시 사용되는 비밀번호로 6자리의 숫자로 만드셔야
+              합니다.
+            </div>
+          </div>
+          <div class="flex items-start space-x-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-circle-alert-icon lucide-circle-alert flex-none"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" x2="12" y1="8" y2="12" />
+              <line x1="12" x2="12.01" y1="16" y2="16" />
+            </svg>
+            <div>
+              포털 사이트나 타 거래소 등 타 사이트와 동일하거나 비슷한 암호를
+              설정하지 마세요. 타 사이트에서 암호가 유출될 경우 제 3자가
+              회원님의 계정에 접근할 위험이 있습니다.
+            </div>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          class="w-full py-2 rounded text-white bg-[var(--color-primary)]"
+          onclick="MovePath('/User/Auth?auth_sort_code=pin_number')"
+        >
+          보안비밀번호 설정
+        </button>
+      </div>
+    </main>
+
+    <script>
+      loadHTML("header", "../components/header.html");
+    </script>
+  </body>
+</html>

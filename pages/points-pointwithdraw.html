@@ -22,7 +22,7 @@
             id="area_coin_sum_amount"
           >
             <div>출금가능수량</div>
-            <div class="font-semibold text-blue-600">0 TTCP</div>
+            <div class="font-semibold text-[var(--color-primary)]">0 TTCP</div>
           </div>
 
           <div class="my-4" id="area_convert_coin_amount">
@@ -78,9 +78,9 @@
             type="button"
             id="btnPointConvertConfirm"
             onclick="PointConvertConfirm()"
-            class="mt-8 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
+            class="mt-8 w-full bg-[var(--color-primary)] text-white py-2 rounded transition"
           >
-            전환
+            보안비밀번호 인증
           </button>
 
           <!-- Modal -->
@@ -95,14 +95,14 @@
               <div class="space-y-4">
                 <div class="flex justify-between">
                   <div>전환 수량</div>
-                  <div class="font-semibold text-blue-600">
+                  <div class="font-semibold text-[var(--color-primary)]">
                     <span id="confirm_convert_coin_amount"></span>
                     <span id="modal_coin_type">SMC</span>
                   </div>
                 </div>
                 <div class="flex justify-between">
                   <div>지급 포인트</div>
-                  <div class="font-semibold text-blue-600">
+                  <div class="font-semibold text-[var(--color-primary)]">
                     <span id="confirm_payments_point_amount"></span> TTCP
                   </div>
                 </div>
@@ -111,7 +111,7 @@
                 <button
                   type="button"
                   id="btnPointConvertProcess"
-                  class="flex-1 bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+                  class="flex-1 bg-[var(--color-primary)] text-white py-2 rounded hover:bg-blue-700"
                 >
                   전환
                 </button>

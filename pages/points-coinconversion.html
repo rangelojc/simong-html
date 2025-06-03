@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simong CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="../styles/index.css" />
+    <script src="../scripts/index.js"></script>
+  </head>
+  <body class="page">
+    <div id="header"></div>
+
+    <main class="wrapper py-6">
+      <div class="max-w-md mx-auto px-0">
+        <div class="p-4">
+          <h1 class="text-xl font-bold mb-4">코인 전환</h1>
+
+          <div class="mb-4">
+            <label for="coin_name" class="block text-sm mb-1">코인</label>
+            <select class="p-2 border rounded mt-2 w-full">
+              <option>TRX</option>
+              <option>USDTTRC20</option>
+            </select>
+          </div>
+
+          <div class="flex justify-between mb-2">
+            <span>보유 포인트</span>
+            <span class="font-semibold">0 TTCP</span>
+          </div>
+
+          <div class="flex justify-between mb-2" id="areaMinConversionAmount">
+            <span>최소 전환 수량</span>
+            <span class="font-semibold">0 TTCP</span>
+          </div>
+
+          <div
+            class="flex justify-between mb-2 hidden"
+            id="area_coin_sum_amount"
+          >
+            <span>보유 TRX 수량</span>
+            <span class="font-semibold">0 TRX</span>
+          </div>
+
+          <div
+            class="hidden mb-4 text-center text-sm text-gray-600 border-t border-b py-2"
+            id="area_one_conversion_coin"
+          >
+            1 TRX = 0.0124 TTCP
+          </div>
+
+          <div
+            class="flex justify-between mb-2 hidden"
+            id="area_convert_fee_rate"
+          >
+            <span>수수료(0%)</span>
+            <span
+              ><span id="areaFeeAmount">0</span>
+              <span class="coinType">TRX</span></span
+            >
+          </div>
+
+          <div
+            class="flex justify-between mb-4 hidden"
+            id="area_payments_coin_amount"
+          >
+            <span>지급 TRX</span>
+            <span
+              ><span id="payments_coin_amount">0</span>
+              <span class="coinType">TRX</span></span
+            >
+          </div>
+
+          <button
+            type="button"
+            id="btnCoinConvertConfirm"
+            onclick="CoinConvertConfirm()"
+            class="mt-4 w-full bg-[var(--color-secondary)] text-white py-2 rounded"
+          >
+            전환
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      loadHTML("header", "../components/header.html");
+    </script>
+  </body>
+</html>

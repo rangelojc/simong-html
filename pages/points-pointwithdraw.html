@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simong CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="../styles/index.css" />
+    <script src="../scripts/index.js"></script>
+  </head>
+  <body class="page">
+    <div id="header"></div>
+
+    <main class="wrapper py-6">
+      <div class="w-full max-w-lg mx-auto px-4">
+        <div class="container mx-auto">
+          <h1 class="text-2xl font-bold mb-4">트레이딩 출금</h1>
+
+          <div
+            class="flex justify-between items-center mb-2"
+            id="area_coin_sum_amount"
+          >
+            <div>출금가능수량</div>
+            <div class="font-semibold text-blue-600">0 TTCP</div>
+          </div>
+
+          <div class="my-4" id="area_convert_coin_amount">
+            <label
+              for="convert_coin_amount"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >출금수량</label
+            >
+            <div class="flex gap-2 mb-2">
+              <input
+                name="convert_coin_amount"
+                id="convert_coin_amount"
+                type="text"
+                placeholder="출금수량 입력"
+                maxlength="28"
+                required
+                class="flex-1 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-400"
+              />
+            </div>
+            <div class="flex justify-between gap-2">
+              <button
+                type="button"
+                data-percent="10"
+                class="flex-1 bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded"
+              >
+                10 %
+              </button>
+              <button
+                type="button"
+                data-percent="25"
+                class="flex-1 bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded"
+              >
+                25 %
+              </button>
+              <button
+                type="button"
+                data-percent="50"
+                class="flex-1 bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded"
+              >
+                50 %
+              </button>
+              <button
+                type="button"
+                data-percent="100"
+                class="flex-1 bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded"
+              >
+                100 %
+              </button>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            id="btnPointConvertConfirm"
+            onclick="PointConvertConfirm()"
+            class="mt-8 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
+          >
+            전환
+          </button>
+
+          <!-- Modal -->
+          <div
+            id="point_convert_modal"
+            class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-50"
+          >
+            <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-6">
+              <p class="text-lg font-semibold mb-4 text-center">
+                포인트 전환 확인
+              </p>
+              <div class="space-y-4">
+                <div class="flex justify-between">
+                  <div>전환 수량</div>
+                  <div class="font-semibold text-blue-600">
+                    <span id="confirm_convert_coin_amount"></span>
+                    <span id="modal_coin_type">SMC</span>
+                  </div>
+                </div>
+                <div class="flex justify-between">
+                  <div>지급 포인트</div>
+                  <div class="font-semibold text-blue-600">
+                    <span id="confirm_payments_point_amount"></span> TTCP
+                  </div>
+                </div>
+              </div>
+              <div class="mt-6 flex justify-between gap-2">
+                <button
+                  type="button"
+                  id="btnPointConvertProcess"
+                  class="flex-1 bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+                >
+                  전환
+                </button>
+                <button
+                  type="button"
+                  class="flex-1 bg-gray-300 text-gray-800 py-2 rounded hover:bg-gray-400"
+                  onclick="document.getElementById('point_convert_modal').classList.add('hidden')"
+                >
+                  닫기
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      loadHTML("header", "../components/header.html");
+    </script>
+  </body>
+</html>

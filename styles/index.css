@@ -39,6 +39,8 @@ Root Variables
   --color-primary-light: rgb(109, 165, 255);
   --color-muted: #6b7280; /* Gray-500 */
 
+  --color-secondary: #ed1e23;
+
   /* Breakpoints (Tailwind-style) */
   --bp-sm: 640px;
   --bp-md: 768px;
